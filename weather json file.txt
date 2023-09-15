@@ -1,0 +1,48 @@
+{
+   "Headline":{
+      "EffectiveDate":"2023-09-15T13:00:00+05:30",
+      "EffectiveEpochDate":1694763000,
+      "Severity":5,
+      "Text":"Thunderstorms Friday afternoon",
+      "Category":"thunderstorm",
+      "EndDate":"2023-09-15T19:00:00+05:30",
+      "EndEpochDate":1694784600,
+      "MobileLink":"http://www.accuweather.com/en/in/draksharama/202076/daily-weather-forecast/202076?lang=en-us",
+      "Link":"http://www.accuweather.com/en/in/draksharama/202076/daily-weather-forecast/202076?lang=en-us"
+   },
+   "DailyForecasts":[
+      {
+         "Date":"2023-09-15T07:00:00+05:30",
+         "EpochDate":1694741400,
+         "Temperature":{
+            "Minimum":{
+               "Value":78,
+               "Unit":"F",
+               "UnitType":18
+            },
+            "Maximum":{
+               "Value":91,
+               "Unit":"F",
+               "UnitType":18
+            }
+         },
+         "Day":{
+            "Icon":15,
+            "IconPhrase":"Thunderstorms",
+            "HasPrecipitation":true,
+            "PrecipitationType":"Rain",
+            "PrecipitationIntensity":"Moderate"
+         },
+         "Night":{
+            "Icon":35,
+            "IconPhrase":"Partly cloudy",
+            "HasPrecipitation":false
+         },
+         "Sources":[
+            "AccuWeather"
+         ],
+         "MobileLink":"http://www.accuweather.com/en/in/draksharama/202076/daily-weather-forecast/202076?day=1&lang=en-us",
+         "Link":"http://www.accuweather.com/en/in/draksharama/202076/daily-weather-forecast/202076?day=1&lang=en-us"
+      }
+   ]
+}
