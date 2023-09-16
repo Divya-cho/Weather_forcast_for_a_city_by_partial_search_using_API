@@ -1,0 +1,51 @@
+.inp{
+    width: 400px;
+    border-radius: 12px;
+    height: 30px;
+}
+body{
+    background-image: url(BGWeatherHd.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+#img
+{
+    margin-top:10px;
+    width:200px;
+    height:95px; 
+    border-radius:8px;
+}
+.cont{
+    width:600px;
+    border: black 2px solid;
+    margin-top:17px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 15px;
+    margin-bottom:10px;
+    background-image: linear-gradient(to bottom right,rgb(20, 126, 224),white,rgb(20, 126, 224));
+    /*box-shadow: 20px 20px 50px 15px rgb(104, 103, 103);*/
+    box-shadow: 20px 20px 50px 15px rgb(104, 103, 103) inset;
+}
+.disp{
+    margin-bottom:8px;
+}
+#te{
+    padding-top:5px;
+    padding-bottom: 1px;
+}
+#but{
+    margin-top: 5px;
+    background-color: black;
+    color: white;
+    border-radius: 11px;
+    width: 130px;
+    height:30px;
+}
+body{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
