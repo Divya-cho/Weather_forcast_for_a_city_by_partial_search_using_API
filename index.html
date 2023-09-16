@@ -25,7 +25,7 @@
         var state=v["AdministrativeArea"]["LocalizedName"];
         var country=v["Country"]["LocalizedName"];
         console.log(key);
-        var wUrl=`http://dataservice.accuweather.com/forecasts/v1/daily/1day/${key}?apikey=${"iSPPckgGAEYYM3h4ze337gpKysKeygOk"}`;
+        var wUrl=`http://dataservice.accuweather.com/forecasts/v1/daily/1day/${key}?apikey=${"6mxMLTlGkOiMiRKwMwkfG2LSrun3KI3G"}`;
         function weatherByCityKey(wea_data)
         {
             var date=wea_data["DailyForecasts"][0]["Date"];
@@ -97,7 +97,7 @@ document.querySelector(".disp").innerHTML=card;
     }
     function search()
     {
-        var api="iSPPckgGAEYYM3h4ze337gpKysKeygOk";
+        var api="6mxMLTlGkOiMiRKwMwkfG2LSrun3KI3G";
         var city=document.getElementById("sear").value;
         
         var url=`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${api}&q=${city}`;
