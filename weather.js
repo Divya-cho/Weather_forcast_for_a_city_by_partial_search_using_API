@@ -16,7 +16,12 @@ function displayWeather(data)
         var date=wea_data["DailyForecasts"][0]["Date"].slice(0,10);
         var tem_min=wea_data["DailyForecasts"][0]["Temperature"]["Minimum"]["Value"].toString()+wea_data["DailyForecasts"][0]["Temperature"]["Minimum"]["Unit"];
         console.log(tem_min);
+        var tem_min_c=((Number(tem_min.slice(0,2))-32)*(5/9)).toFixed(0);
+        console.log("tttttttttt"+tem_min_c);
+        
         var tem_max=wea_data["DailyForecasts"][0]["Temperature"]["Maximum"]["Value"].toString()+wea_data["DailyForecasts"][0]["Temperature"]["Maximum"]["Unit"];
+        var tem_max_c=((Number(tem_max.slice(0,2))-32)*(5/9)).toFixed(0);
+        console.log("tttttttttt"+tem_max_c);
         var dt_has_preci=wea_data["DailyForecasts"][0]["Day"]["HasPrecipitation"];
         var dt_prec_type=wea_data["DailyForecasts"][0]["Day"]["PrecipitationType"];
        // var dt_prec_inten=wea_data["DailyForecasts"][0]["Day"]["PrecipitationIntensity"];
@@ -38,8 +43,8 @@ function displayWeather(data)
 <b>${city_name} condition :</b>  
     ${condition}
 <b>Weather catogory : </b> ${wea_type}
-<b>Minimum Temperature : </b> ${tem_min}
-<b>Maximum temperature :</b>  ${tem_max}
+<b>Minimum Temperature : </b> ${tem_min_c}C (${tem_min})
+<b>Maximum temperature :</b>  ${tem_max_c}C (${tem_max})
 <b>State : </b>${state}
 <b>Country : </b>${country}
 <b>Day time : </b>
