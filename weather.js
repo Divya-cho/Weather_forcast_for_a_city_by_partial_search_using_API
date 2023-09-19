@@ -1,6 +1,7 @@
 
 function displayWeather(data)
 {
+    var apik="iSPPckgGAEYYM3h4ze337gpKysKeygOk";
     var v=data[0];
     var city_name=v["LocalizedName"];
     //var type=v["Type"];
@@ -9,7 +10,7 @@ function displayWeather(data)
     var state=v["AdministrativeArea"]["LocalizedName"];
     var country=v["Country"]["LocalizedName"];
     console.log(v);
-    var wUrl=`http://dataservice.accuweather.com/forecasts/v1/daily/1day/${key}?apikey=${"iSPPckgGAEYYM3h4ze337gpKysKeygOk"}`;
+    var wUrl=`https://dataservice.accuweather.com/forecasts/v1/daily/1day/${key}?apikey=${apik}`;
     function weatherByCityKey(wea_data)
     {
         var date=wea_data["DailyForecasts"][0]["Date"].slice(0,10);
@@ -28,23 +29,23 @@ function displayWeather(data)
         var wea_link=wea_data["DailyForecasts"][0]["Link"];
         var condition=wea_data["Headline"]["Text"];
         var wea_type=wea_data["Headline"]["Category"];
-        var card=`<div class="card" style="width:400px; margin-top:20px; border-radius:10px;">
+        var card=`<div class="card">
 <center><img src="clear.jpg" class="card-img-top" id="img" alt="..." ></center>
 <div class="card-body">
 <center><h5 class="card-title">${city_name}</h5></center>
 <pre class="card-text">
-    <b>Date :</b> ${date}
-    <b>${city_name} condition :</b>  
+<b>Date :</b> ${date}
+<b>${city_name} condition :</b>  
     ${condition}
-    <b>Weather catogory : </b> ${wea_type}
-    <b>Minimum Temperature : </b> ${tem_min}
-    <b>Maximum temperature :</b>  ${tem_max}
-    <b>State : </b>${state}
-    <b>Country : </b>${country}
-    <b>Day time : </b>
-    <b>Has precipitation ?:</b>  ${dt_has_preci}
-    <b>Night time : </b>
-    <b>Has precipitation ?:</b>  ${nt_has_preci}</pre>
+<b>Weather catogory : </b> ${wea_type}
+<b>Minimum Temperature : </b> ${tem_min}
+<b>Maximum temperature :</b>  ${tem_max}
+<b>State : </b>${state}
+<b>Country : </b>${country}
+<b>Day time : </b>
+<b> Has precipitation ?:</b>  ${dt_has_preci}
+<b>Night time : </b>
+<b> Has precipitation ?:</b>  ${nt_has_preci}</pre>
 <center><a href="${wea_link}" class="btn btn-primary">See complete statistics</a></center>
 </div>
 </div>`
@@ -84,7 +85,7 @@ function search()
     var api="iSPPckgGAEYYM3h4ze337gpKysKeygOk";
     var city=document.getElementById("sear").value;
     
-    var url=`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${api}&q=${city}`;
+    var url=`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=${api}&q=${city}`;
     fetch(url).then(res=>res.json()).then(res=>{displayWeather(res);});
     
 }
